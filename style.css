@@ -1,0 +1,188 @@
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Define CSS Variables for Theming */
+:root {
+    --primary-color: #3d52d5;
+    --background-color: #f0f2f5;
+    --surface-color: #ffffff;
+    --text-color: #2c3e50;
+    --subtle-text-color: #7f8c8d;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* THIS IS THE CRUCIAL PART THAT MAKES DARK MODE WORK */
+body.dark-mode {
+    --primary-color: #5a72e6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #ecf0f1;
+    --subtle-text-color: #95a5a6;
+    --border-color: #34495e;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header & App Title */
+.app-title {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.app-title i {
+    transform: rotate(-10deg);
+}
+
+/* Theme Switcher Button */
+.theme-btn {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+    color: var(--primary-color);
+}
+
+/* Search Section */
+.search-section .form-control {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px 0 0 12px;
+    padding: 0.75rem 1.25rem;
+}
+
+.search-section .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-color), 0.25);
+    border-color: var(--primary-color);
+    background-color: var(--surface-color);
+    color: var(--text-color);
+}
+
+.search-section .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 0 12px 12px 0;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+.search-section .btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Movie Card Styles */
+.movie-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+}
+
+.movie-card img {
+    height: 380px;
+    object-fit: cover;
+}
+
+.movie-card .card-body {
+    padding: 1.25rem;
+}
+
+.movie-title {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.movie-year {
+    color: var(--subtle-text-color);
+    font-weight: 300;
+}
+
+/* Details Page Specific Styles */
+.back-btn {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+#movieDetailsContainer {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+#movieDetailsContainer h3 {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.detail-item {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.detail-item strong {
+    display: block;
+    color: var(--subtle-text-color);
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.spinner-border {
+    color: var(--primary-color);
+}
+
+/* 869ec6d */
