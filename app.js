@@ -54,9 +54,6 @@ async function fetchMovieData(searchTerm) {
     }
 }
 
-/**
- * Displays a list of movies in the results container.
- */
 function displayMovies(movies) {
     resultsContainer.innerHTML = '';
     if (movies.length === 0) return;
@@ -65,9 +62,6 @@ function displayMovies(movies) {
     });
 }
 
-/**
- * Creates the HTML for a single movie card.
- */
 function createMovieCard(movie) {
     const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400x600.png?text=No+Image';
     return `
@@ -83,9 +77,6 @@ function createMovieCard(movie) {
     `;
 }
 
-/**
- * Shows feedback messages (like errors or loading indicators).
- */
 function showFeedback(message, type, isLoading = false) {
     let content = isLoading ? `
         <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
@@ -94,9 +85,6 @@ function showFeedback(message, type, isLoading = false) {
     uiFeedback.innerHTML = content;
 }
 
-/**
- * Clears the feedback message area.
- */
 function clearFeedback() {
     uiFeedback.innerHTML = '';
 }
