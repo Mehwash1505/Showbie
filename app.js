@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const API_KEY = '869ec6d'; // IMPORTANT: Add your API key
+const API_KEY = '869ec6d';
 const API_BASE_URL = 'https://www.omdbapi.com/';
 
 // --- DOM ELEMENTS ---
@@ -16,10 +16,6 @@ window.addEventListener('DOMContentLoaded', fetchDefaultMovies);
 
 
 // --- FUNCTIONS ---
-
-/**
- * Handles the form submission to search for movies.
- */
 function handleSearch(e) {
     e.preventDefault();
     const searchTerm = movieInput.value.trim();
@@ -27,29 +23,18 @@ function handleSearch(e) {
     else showFeedback('Please enter a movie title.', 'warning');
 }
 
-/**
- * Handles clicks on movie cards to redirect to the details page.
- */
 function handleCardClick(e) {
     const card = e.target.closest('.movie-card-wrapper');
     if (card) {
         const imdbID = card.dataset.imdbid;
-        // Redirect to the new details page with the ID in the URL
         window.location.href = `movie.html?id=${imdbID}`;
     }
 }
 
-/**
- * Fetches and displays a default list of movies on page load.
- * The OMDb API doesn't have a "latest" endpoint, so we search for a popular term.
- */
 function fetchDefaultMovies() {
-    fetchMovieData("Action"); // You can change "Action" to any other default search
+    fetchMovieData("Action");
 }
 
-/**
- * Fetches a list of movies based on a search term.
- */
 async function fetchMovieData(searchTerm) {
     showFeedback('Loading Movies...', 'info', true);
     try {
