@@ -1,7 +1,5 @@
-/* Import a modern font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Define CSS Variables for Theming */
 :root {
     --primary-color: #3d52d5;
     --background-color: #f0f2f5;
@@ -13,7 +11,6 @@
     --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* THIS IS THE CRUCIAL PART THAT MAKES DARK MODE WORK */
 body.dark-mode {
     --primary-color: #5a72e6;
     --background-color: #121212;
@@ -25,7 +22,6 @@ body.dark-mode {
     --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -33,7 +29,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header & App Title */
 .app-title {
     color: var(--primary-color);
     font-weight: 700;
@@ -43,7 +38,6 @@ body {
     transform: rotate(-10deg);
 }
 
-/* Theme Switcher Button */
 .theme-btn {
     background-color: var(--surface-color);
     color: var(--text-color);
@@ -64,7 +58,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Search Section */
 .search-section .form-control {
     background-color: var(--surface-color);
     color: var(--text-color);
@@ -91,7 +84,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Movie Card Styles */
 .movie-card {
     background-color: var(--surface-color);
     border: 1px solid var(--border-color);
@@ -126,7 +118,6 @@ body {
     font-weight: 300;
 }
 
-/* Details Page Specific Styles */
 .back-btn {
     background-color: var(--surface-color);
     color: var(--text-color);
@@ -184,5 +175,3 @@ body {
 .spinner-border {
     color: var(--primary-color);
 }
-
-/* 869ec6d */
