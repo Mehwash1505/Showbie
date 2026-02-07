@@ -1,12 +1,11 @@
 // --- CONFIGURATION ---
-const API_KEY = '869ec6d'; // IMPORTANT: Add your API key
+const API_KEY = '869ec6d'; 
 const API_BASE_URL = 'https://www.omdbapi.com/';
 
 // --- DOM ELEMENTS ---
 const movieDetailsContainer = document.getElementById('movieDetailsContainer');
 
 // --- FUNCTIONS ---
-
 function getMovieIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('id');
@@ -35,7 +34,7 @@ async function fetchAndDisplayMovieDetails() {
 }
 
 function displayMovieDetails(movie) {
-    document.title = movie.Title; // Update the page title
+    document.title = movie.Title; 
     const posterUrl = movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/400x600.png?text=No+Image';
 
     movieDetailsContainer.innerHTML = `
