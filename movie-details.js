@@ -1,4 +1,4 @@
-// --- CONFIGURATION ---
+// --- MOVIE-DETAILS.JS ---
 const API_KEY = '869ec6d'; 
 const API_BASE_URL = 'https://www.omdbapi.com/';
 
