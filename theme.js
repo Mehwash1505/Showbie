@@ -1,4 +1,4 @@
-// theme.js
+// THEME.JS
 console.log("Theme script has started!");
 document.addEventListener('DOMContentLoaded', () => {
 
